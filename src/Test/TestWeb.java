@@ -66,7 +66,7 @@ public class TestWeb {
 			System.out.println("Verified");
 		}
 	
-	
+		driver.close();
 
 	}
 
