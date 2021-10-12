@@ -63,10 +63,35 @@ public class TestWeb {
 		
 		if(product.getText().equals(result_product.getString("name")) &&  cart_price.equals(result_product.getFloat("price")))
 		{
-			System.out.println("Verified");
+			System.out.println("Your product is verified from DataBase");
+			
+			WebElement checkout = driver.findElement(By.xpath("//button[@id='checkout']"));
+			checkout.click();
+			
+			WebElement FirstName = driver.findElement(By.xpath("//input[@id='first-name']"));
+			FirstName.sendKeys("Ram");
+			
+			WebElement LastName = driver.findElement(By.xpath("//input[@id='last-name']"));
+			LastName.sendKeys("Patil");
+			
+			WebElement PostelCode = driver.findElement(By.xpath("//input[@name='postalCode']"));
+			PostelCode.sendKeys("416204");
+			
+			WebElement Continue = driver.findElement(By.xpath("//input[@id='continue']"));
+			Continue.click();
+			
+			WebElement finish = driver.findElement(By.xpath("//button[@id='finish']"));
+			finish.click();
+			
+			WebElement order = driver.findElement(By.xpath("//div[@class='complete-text']"));
+			System.out.println(order.getText());
+			
+		}else
+		{
+			System.out.println("Product is not verified from DataBase");
 		}
 	
-		driver.close();
+//		driver.close();
 
 	}
 
