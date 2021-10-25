@@ -1,0 +1,8 @@
+1) Create a new  Java project for the ecommerce website
+   https://www.saucedemo.com/
+2) Create a new table for login details and add credential data into it
+   Use the data we have added into Login Table for doing login to application
+3) Add the the product name and its price into eproduct table
+4) Get the product name from databse and add that to your cart
+5) Verify that product is listed on the cart page and it's price is coming same 
+   as what we have in database
